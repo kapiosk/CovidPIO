@@ -11,7 +11,7 @@ html = html.decode('utf-8')
 soup = BeautifulSoup(html, features='html.parser')
 pdfs = soup.find_all("a", {"class": "flag pdf"})
 
-with open('latest.html', 'w') as f:
+with open('index.html', 'w') as f:
 	for pdf in pdfs[:10]:
 		href = pdf["href"]
 		if "stay" in href or "rapid" in href:
