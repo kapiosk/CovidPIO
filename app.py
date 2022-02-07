@@ -17,7 +17,7 @@ with open('data.csv', 'w', newline='') as csvfile:
 	for pdf in pdfs[:10]:
 		href = pdf["href"]
 		if "stay" in href or "rapid" in href:
-			csvwriter.writerow(href, pdf.text)
+			csvwriter.writerow([href, pdf.text])
 
 with open('latest.html', 'w') as f:
 	for pdf in pdfs[:10]:
